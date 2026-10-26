@@ -154,7 +154,7 @@ export type SessionCreateInput = {
   readonly title?: string | undefined
   readonly agent?: Agent.ID | undefined
   readonly model?: Model.Ref | undefined
-  readonly location?: Location.PublicRef | undefined
+  readonly location?: Location.Input | undefined
   readonly metadata?: Session.Metadata | undefined
   readonly permissions?: Permission.Ruleset | undefined
 }
@@ -544,7 +544,7 @@ export type ExperimentalSessionStatsOperation<E = never> = (
 export type ExperimentalSessionImportInput = {
   readonly info: Session.Info
   readonly messages: ReadonlyArray<SessionMessage.Info>
-  readonly location?: Location.PublicRef | undefined
+  readonly location?: Location.Input | undefined
 }
 export type ExperimentalSessionImportOutput = Session.Info
 export type ExperimentalSessionImportOperation<E = never> = (
